@@ -32,7 +32,7 @@ class CsvProcessingWorker
 
     header = xlsx.row(1)
     xlsx.each_with_index do |row, index|
-      next if index == 0 # Skip the header row
+      next if index == 0
 
       dish_hash = Hash[header.zip(row)]
       dish = Dish.find_or_initialize_by(dish_name: dish_hash['dish_name'])
