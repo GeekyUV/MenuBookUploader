@@ -70,3 +70,10 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# gems for menubook
+gem 'csv'
+gem 'bootstrap-sass'
+gem 'sidekiq-cron'
+gem 'sidekiq'
+gem 'bootstrap', '~> 5.0'
