@@ -10,7 +10,7 @@
     <p>🍽️ Introducing our Menu Book Uploader App – the perfect solution for restaurant owners. </p>
     <%= form_tag import_dishes_path, multipart: true, class: 'text-center' do %>
       <div class="form-group">
-        <%= file_field_tag :file, class: 'form-control-file', accept: '.csv' %>
+        <%= file_field_tag :file, class: 'form-control-file', accept: '.csv, .xlsx' %>
       </div><br>
       <div class="btn-group">
         <%= submit_tag 'Upload Menu', class: 'btn btn-primary' %><br><br>
