@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>x
+  <%= stylesheet_link_tag 'menu' %>
+</head>
+<body>
+<div class="container">
+  <% if @dishes.present? %>
+    <h1>CSV Data</h1>
+    <table>
+      <thead>
+      <tr>
+        <th>Dish Name</th>
+        <th>Dish Description</th>
+        <th>Dish Type</th>
+        <th>Allergens</th>
+        <th>Category</th>
+        <th>Price(Rs.)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @dishes.each do |dish| %>
+        <tr>
+          <td><%= dish.dish_name %></td>
+          <td><%= dish.dish_description %></td>
+          <td><%= dish.dish_type %></td>
+          <td><%= dish.allergens %></td>
+          <td><%= dish.category %></td>
+          <td><%= dish.price %>/-</td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= form_tag destroy_all_dishes_path, method: :delete, data: { confirm: 'Are you sure you want to delete all dishes?' } do %>
+      <%= submit_tag 'Delete All Dishes', class: 'btn btn-danger' %>
+    <% end %><br>
+    <%= link_to 'Back', root_path, class: 'btn btn-primary btn-back' %><br>
+  <% else %>
+    <p>No CSV data available</p>
+    <%= link_to 'Back', root_path, class: 'btn btn-primary btn-back' %>
+  <% end %>
+  <div class="centered-message">
+    <% if notice.present? %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+  </div>
+</div>
+</body>
+</html>
