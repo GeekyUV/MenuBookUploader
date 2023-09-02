@@ -14,7 +14,7 @@ class DishesController < ApplicationController
         if file_extension == '.csv' || file_extension == '.xlsx'
           if uploaded_file.size <= 2.megabytes
             Dish.import(file_extension, uploaded_file.path)
-            notice_message = "#{file_extension.upcase} file imported successfully!"
+            notice_message = "#{file_extension.upcase} file imported successfully! click view menu to open"
           else
             CsvProcessingWorker.perform_async(uploaded_file.path)
             notice_message = "#{file_extension.upcase} file import is in progress!"
