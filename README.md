@@ -1,6 +1,6 @@
 
 # Menu Book Uploader
- project in rails where user can upload csv of menu file and can view the uploaded menu on a new page 
+ project in rails where user can upload excel or csv of menu file and can view the uploaded menu on a new page 
 
 #### project uses Ruby version 3.2.2 and Rails version 7.0.7
 
