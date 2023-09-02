@@ -1,6 +1,18 @@
 
 # Menu Book Uploader
- project in rails where user can upload csv of menu file and can view the uploaded menu on a new page 
+ project in rails where user can upload excel or csv of menu file and can view the uploaded menu on a new page 
+
+ csv data looks like:
+
+| dish_name       | dish_description                       | dish_type | allergens        | category    | price |
+| --------------- | -------------------------------------- | --------- | ---------------- | ----------- | ---------- |
+| Biriyani        | Flavoured Chicken and Rice savoury     | Non-Veg   |                 | Main Course | 280      |
+| Porotta         | Indian Bread                           | Veg       | contains gluten | Bread       | 40      |
+| paneer          | Indian                                 | Veg       | none             | Dish        | 200     |
+| dal makhani     | Indian                                 | Veg       | none             | Dish        | 100      |
+| dal tadka       | Indian                                 | Veg       | contains gluten | Dish        | 200      |
+| fried rice      | Indian                                 | Veg       | contains gluten | Dish        | 300     |
+| manchurian      | Indian                                 | Veg       | contains gluten | Dish        | 400      |
 
 #### project uses Ruby version 3.2.2 and Rails version 7.0.7
 
@@ -36,11 +48,10 @@ rails db:migrate
 rails server or rails s
 
  ```
-- Sample file to upload(download in .xlsx or .csv format)
-```bash
-https://docs.google.com/spreadsheets/d/1KAc6goOMJf5dgJzW91R6b8U-0RtBPxoEBLFPUcwCuUA/edit?usp=sharing
-```
+## Sample Files to Upload
 
+- [Click here to download the sample menu in CSV format](https://docs.google.com/spreadsheets/d/1KAc6goOMJf5dgJzW91R6b8U-0RtBPxoEBLFPUcwCuUA/export?format=csv)
+- [Click here to download the sample menu in XLSX format](https://docs.google.com/spreadsheets/d/1KAc6goOMJf5dgJzW91R6b8U-0RtBPxoEBLFPUcwCuUA/edit?usp=sharing)
 
  # Sidekiq and redis setup
 
@@ -55,7 +66,7 @@ for mac
 ``` 
 brew install redis
 ```
-- start redis server
+-  ### start redis server
 ``` 
 redis-server
 ```
@@ -65,7 +76,7 @@ redis-server
 https://github.com/microsoftarchive/redis/releases
 ```
 
-- start sidekiq
+- ###  start sidekiq
 
 ``` 
 bundle exec sidekiq
