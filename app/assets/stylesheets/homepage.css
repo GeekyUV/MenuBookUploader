@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Your Cool Font', sans-serif; 
+}
+
+.jumbotron {
+    background-image: url('https://images.unsplash.com/photo-1484325881845-65073528922e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white; 
+}
+
+.container {
+    margin-top: 20vh;
+}
+
+.display-4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+p {
+    font-size: 1rem; 
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+.form-group {
+    text-align: left;
+}
+
+.btn {
+    margin-right: 10px; 
+}
+
+
+
