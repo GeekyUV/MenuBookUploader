@@ -7,17 +7,15 @@
 <div class="jumbotron text-center">
   <div class="container">
     <h1 class="display-4">Welcome to Menu Book Uploader</h1>
-    <p>🍽️ Step into a world where flavors dance on your palate, where ambiance sets the stage for unforgettable memories, and where you're not just a guest; you're family.</p>
-
-   
+    <p>🍽️ Introducing our Menu Book Uploader App – the perfect solution for restaurant owners. </p>
     <%= form_tag import_dishes_path, multipart: true, class: 'text-center' do %>
       <div class="form-group">
         <%= file_field_tag :file, class: 'form-control-file' %>
       </div><br>
       <div class="btn-group">
-        <%= submit_tag 'Upload CSV', class: 'btn btn-primary' %><br><br>
+        <%= submit_tag 'Upload Menu', class: 'btn btn-primary' %><br><br>
         <p><%= notice %></p>
-        <%= link_to 'View CSV Data', dish_path, class: 'btn btn-secondary' %><br>
+        <%= link_to 'View Menu', dish_path, class: 'btn btn-secondary', style: 'color: white;' %><br>
       </div>
     <% end %>
   </div>
