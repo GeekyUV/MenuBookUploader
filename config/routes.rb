@@ -1,6 +1,11 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :dishes, only: [:new] do
+    collection { post :import }
+    delete :destroy_all, on: :collection
+  end
+  root 'dishes#index'
+  get 'dish', to: 'dishes#show', as: 'dish'
+  delete 'dishes/delete_all', to: 'dishes#delete_all', as: :delete_all_dishes
+    mount Sidekiq::Web => '/sidekiq'
 end
